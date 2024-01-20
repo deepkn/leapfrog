@@ -17,7 +17,7 @@ pub fn load_u64_le(buf: &[u8], len: usize) -> u64 {
     let mut data = 0u64;
     let ptr: *mut _ = &mut data;
     unsafe {
-        alloc::ptr::copy_nonoverlapping(buf.as_ptr(), ptr as *mut u8, len);
+        core::ptr::copy_nonoverlapping(buf.as_ptr(), ptr as *mut u8, len);
     }
     data.to_le()
 }

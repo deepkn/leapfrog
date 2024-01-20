@@ -20,8 +20,6 @@ use alloc::alloc::Global;
 use allocator_api2::alloc::{Allocator, Global};
 #[cfg(not(feature = "stable_alloc"))]
 use core::alloc::Allocator;
-#[cfg(not(feature = "stable_alloc"))]
-use std::alloc::Global;
 
 // Re export the entry api.
 pub use crate::hashentry::{Entry, OccupiedEntry, VacantEntry};
